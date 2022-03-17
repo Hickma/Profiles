@@ -1,4 +1,4 @@
-import writers from "./writers"
+import writers from "./Writers.js"
 
 function App() {
   return(
@@ -6,18 +6,18 @@ function App() {
    <h1>Writer profiles</h1>
    <div className="container">
 {
-  writer.map((writers)=>(
+  writers.map((writer)=>(
     <div key={writer.id} className="card">
     <img 
-    src={`images/${writer.avator}.png`}
+    src={`images/${writer.avatar}.png`}
     height = '300px'
     width = '300px'
-    alt={writer.img}
+    alt={writers.img}
     />
     <div className="textGroup">
-    <h3>{writer.name}</h3>
-    <p>{writer.email}</p>
-    <p>{writer.phone}</p>
+    <h3>{writers.Name}</h3>
+    <p>{writers.email}</p>
+    <p>{writers.phone}</p>
     </div>
     </div>
   ))}
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
